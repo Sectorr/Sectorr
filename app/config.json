@@ -1,0 +1,9 @@
+{
+  "database": {
+    "host": "localhost",
+    "username": "user",
+    "password": "pass",
+    "name": "database"
+  },
+  "user": "App\\Models\\User"
+}
