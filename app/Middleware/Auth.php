@@ -7,8 +7,13 @@ use Sectorr\Core\Http\Redirect;
 
 class Auth implements MiddlewareContract
 {
-
-    public static function allow()
+    
+    /**
+     * @param $route
+     * @param array $properties
+     * @return bool|void
+     */
+    public static function allow($route, array $properties)
     {
         if (\Sectorr\Core\Auth\Auth::check()) {
             return true;

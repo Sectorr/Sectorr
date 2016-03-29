@@ -8,8 +8,13 @@ use Sectorr\Core\Http\Redirect;
 
 class Guest implements MiddlewareContract
 {
-
-    public static function allow()
+    
+    /**
+     * @param $route
+     * @param array $properties
+     * @return bool|void
+     */
+    public static function allow($route, array $properties)
     {
         if (! Auth::check()) {
             return true;
